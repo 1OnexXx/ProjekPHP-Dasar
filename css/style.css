@@ -1,0 +1,652 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;700&display=swap');
+
+
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box; /* Menambahkan box-sizing untuk menghindari masalah dengan padding dan margin */
+}
+
+body{
+    overflow: hidden;
+}
+.container{
+    width: 100vw;  /* Lebar 100% dari viewport */
+    height: 100vh;
+}
+.wraper{
+    display: flex;
+}
+.nav{
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    
+}
+.atas-nav{
+    position: fixed;
+    z-index: 10;
+    top: 20px; 
+    right: 20px; 
+
+    
+}
+.container-kiri{
+    background-color: #222934;
+    width: 55%;
+    height: 100vh;
+    color: whitesmoke;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative; /* Tambahkan posisi relatif untuk referensi elemen-elemen tetap */
+}
+.logo{
+    width: 480px;
+    height: 65vh;
+
+}
+.logoTEXT{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 500; /* Menggunakan font-weight yang lebih tebal */
+    font-size: 24px; /* Ukuran font bisa disesuaikan sesuai kebutuhan */
+    position: relative;
+
+}
+.welcome{
+    font-family: 'Roboto', sans-serif;
+    font-weight: 100; /* Menggunakan font-weight yang lebih tebal */
+    font-size: 43px; /* Ukuran font bisa disesuaikan sesuai kebutuhan */
+    margin-top: 150px;
+    margin-bottom: 50px;
+    letter-spacing: 1px;
+}
+
+.dark-mode-button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    border-radius: 50%;
+}
+.dark-mode-button i {
+    font-size: 1.5em;
+}
+.fas.fa-moon{
+    font-size: 3em;
+}
+
+.star {
+    position: absolute;
+    width: 2px;
+    height: 2px;
+    background-color: #fff;
+    border-radius: 50%;
+}
+
+.center-box {
+    width: 800px;
+    height: 650px;
+    background-color: #ffffff;
+    color: #000000;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    flex-direction: column;
+  }
+
+  
+
+.btn-i{
+    position: fixed;
+    bottom: 20px; /* Jarak dari bawah layar */
+    left: 20px; /* Jarak dari kiri layar */
+
+    font-size: 25px;
+    width: 35px;
+    height: 35px;
+    font-weight: 700;
+    font-family: 'Poppins', sans-serif;
+    border-radius: 5px;
+    cursor: pointer;
+    color: aqua;
+    
+    
+}
+
+/* Gaya untuk bagian atas dalam center box */
+.atas-i {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 60px;
+padding: 20px;
+margin-top: -40px;
+}
+
+.kembali-i {
+    background-color: #fff;
+    color:#222934;
+    border: 1px solid #9e9c9c ;
+    border-radius: 5px;
+    padding: 5px 10px;
+    font-weight: 700; /* Menjadikan teks pada tombol bold */
+    font-size: 20px;
+    /* position: fixed; */
+    /* top: 10px; Jarak dari atas layar */
+    /* left: 20px; Jarak dari kiri layar */
+}
+.kembali-i:hover{
+    cursor: pointer;
+    border: 1px solid #000000;
+    box-shadow: 2px 5px 24px 5px rgba(0,0,0,0.3);
+    -webkit-box-shadow: 2px 5px 24px 5px rgba(0,0,0,0.3);
+    -moz-box-shadow: 2px 5px 24px 5px rgba(0,0,0,0.3);
+}
+
+/* Gaya untuk tombol cookie */
+.cookie {
+    background-color: #fff;
+    color: 222934;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+    font-family: 'poppins', sans-serif;
+    font-weight: 600;
+    font-size: 13px;
+    /* position: fixed; */
+    /* top: 25px; Jarak dari atas layar */
+    /* right: 20px; Jarak dari kiri layar */
+}
+
+.cookie:hover{
+
+    border-radius: 5px;
+    border: 1px solid #000000;
+
+}
+
+/* Gaya untuk kontainer utama text-i */
+.text-i {
+    max-height: 400px; /* Atur tinggi maksimum sesuai kebutuhan Anda */
+    overflow-y: auto; /* Tambahkan scrollbar vertikal jika konten melampaui tinggi maksimum */
+    padding: 10px;
+    margin: 10px;
+    margin-top: -30px;
+}
+
+/* Gaya untuk h1 */
+.textH1 {
+    font-size: 45px;
+    font-weight: 600;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk teks di bawah h1 */
+.textH1bawah {
+    font-size: 14px;
+    word-spacing: 2px;
+    margin-bottom: 20px;
+    font-weight: 300;
+    line-height: 1.5;
+
+}
+/* Gaya untuk kontainer tombol di bawah h1 */
+.btn-H1 {
+    margin-bottom: 20px; /* Memberikan jarak di bawah kontainer tombol */
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Menyelaraskan item di tengah vertikal */
+    justify-content: flex-end; /* Memposisikan tombol ke kanan */
+    gap: 10px; /* Menambahkan jarak antar tombol */
+    padding: 10px; /* Menambahkan padding di dalam kontainer */
+}
+
+.confirm-i{
+    margin-bottom: -50px;
+    margin-top: 40px;
+    display: flex; /* Menggunakan Flexbox untuk tata letak */
+    align-items: center; /* Menyelaraskan item di tengah vertikal */
+    justify-content: flex-end; /* Memposisikan tombol ke kanan */
+    gap: 10px; /* Menambahkan jarak antar tombol */
+    padding: 10px; /* Menambahkan padding di dalam kontainer */
+}
+.confirm{
+    background-color: rgb(7, 205, 139);
+    color: rgb(0, 0, 0);
+    width: 180px;
+    height: 40px;
+    border-radius: 20px;
+    border: none;
+    cursor: pointer;
+}
+.confirm:hover{
+    background-color: rgb(5, 179, 121);
+    color: white;
+    
+}
+
+/* Gaya umum untuk tombol */
+.btn-H1 button {
+    padding: 10px 20px; /* Ukuran padding pada tombol */
+    font-size: 16px; /* Ukuran font pada tombol */
+    border: none; /* Menghilangkan border */
+    border-radius: 5px; /* Sudut membulat */
+    cursor: pointer; /* Mengubah kursor saat hover */
+}
+
+/* Gaya untuk tombol reject */
+.btn-reject {
+    background-color: #ffffff; /* Warna latar belakang */
+    color: rgb(0, 0, 0); /* Warna teks */
+}
+
+/* Gaya untuk tombol accept */
+.btn-accept {
+    background-color: #ffffff; /* Warna latar belakang */
+    color: rgb(0, 0, 0); /* Warna teks */
+}
+
+.btn-accept:hover , .btn-reject:hover{
+
+    border: 1px solid black;
+    border-radius: 20px;
+
+}
+
+/* Gaya untuk h2 */
+.textH2 {
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+/* Gaya untuk teks di bawah h2 */
+.bawahH2 {
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+
+}
+
+
+.pilihan {
+    margin: auto;
+    padding: 20px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+.pilihan div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.pilihan span {
+    flex: 1;
+}
+
+.pilihan a {
+    flex: 1;
+    color: #9e9c9c;
+    text-align: right;
+    margin-right: 10px;
+}
+
+/* Toggle Switch Styles */
+.switch {
+    position: relative;
+    display: inline-block;
+    width: 34px;
+    height: 20px;
+}
+
+.switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+}
+
+.slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: .4s;
+    border-radius: 34px;
+}
+
+.slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: .4s;
+    border-radius: 50%;
+}
+
+input:checked + .slider {
+    background-color: #4caf50;
+}
+
+input:checked + .slider:before {
+    transform: translateX(14px);
+}
+
+.container-kanan{
+    background-color:cornsilk;
+    width: 55%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form{
+    width: 420px;
+    height: 70vh;
+
+}
+.txt-login{
+    margin-top: 400px;
+    margin-bottom: 40px;
+    font-size: 20px;
+    font-weight: 300;
+}
+.username{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+
+}
+.password{
+    width: 400px;
+    height: 40px;
+    margin-bottom: 20px;
+    padding: 10px;
+}
+
+.rememberTXT {
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 10px;
+    margin-top: 10px;
+    display: inline-block; /* Menjadikan teks dan checkbox berada dalam satu baris */
+}
+
+.checkbox-wrapper {
+    display: inline-block; /* Menjadikan wrapper checkbox berada dalam satu baris */
+    vertical-align: middle;
+}
+
+.checkbox {
+    margin-left: 5px;
+    vertical-align: middle;
+    transition: transform 0.3s ease; /* Animasi transformasi saat checkbox berubah */
+}
+
+.checkbox:checked {
+    transform: scale(1.1); /* Memperbesar checkbox saat dicentang */
+}
+
+.btn-login{
+    width: 400px;
+    height: 40px;
+    border-radius: 5px;
+    border: none;
+    background-color :rgb(7, 205, 139);
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+.btn-login:hover{
+    background-color :rgb(12, 123, 86);
+    color: #fff;
+
+
+}
+
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.789);
+    z-index: 10; /* Pastikan overlay berada di atas elemen lain */
+    display: none;
+}
+
+.center-box {
+    z-index: 20; /* Pastikan kotak berada di atas overlay */
+}
+
+
+a{
+    text-decoration: none;
+    color: rgb(49, 93, 253);
+}
+
+a:hover{
+    text-decoration: underline;
+}
+a:visited{
+    text-decoration: none;
+    color: rgb(49, 93, 253);
+}
+
+
+
+            @media screen  and  (max-width : 1440px ) {
+
+                .container {
+                    width: 100vw;  /* Lebar 100% dari viewport */
+                    height: 100vh; /* Tinggi 100% dari viewport */
+                    margin: 0;
+                    padding: 0;
+                    box-sizing: border-box; /* Pastikan padding dan border tidak mempengaruhi ukuran */
+                }
+            
+            .wraper{
+            display: block;
+            }
+                
+            .container-kiri{
+                background-color: #222934;
+                width: 100%;
+                height: 30vh;
+                color: whitesmoke;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                position: relative; /* Tambahkan posisi relatif untuk referensi elemen-elemen tetap */
+            }
+            .logo{
+                width: 300px;
+                height: 50vh;
+                margin-top: 250px;
+
+            }
+            .logoTEXT{
+                font-family: 'Montserrat', sans-serif;
+                font-weight: 500; /* Menggunakan font-weight yang lebih tebal */
+                font-size: 10px; /* Ukuran font bisa disesuaikan sesuai kebutuhan */
+                position: relative;
+
+            }
+            .welcome{
+                font-family: 'Roboto', sans-serif;
+                font-weight: 100; /* Menggunakan font-weight yang lebih tebal */
+                font-size: 30px; /* Ukuran font bisa disesuaikan sesuai kebutuhan */
+                margin-top: 10px;
+                margin-bottom: 20px;
+                letter-spacing: 1px;
+            }
+
+
+            .star {
+                position: absolute;
+                width: 2px;
+                height: 2px;
+                background-color: #fff;
+                border-radius: 50%;
+            }
+
+            .center-box {
+                width: 50px;
+                height: 50px;
+                background-color: #4caf50;
+                color: #fff;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                position: fixed;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+                border-radius: 10px;
+                flex-direction: column;
+            }
+
+
+            .container-kanan{
+                background-color:cornsilk;
+                width: 100%;
+                height: 10vh;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+            }
+
+            .form{
+                width: 420px;
+                height: 70vh;
+                display: inline-block;
+            }
+            .txt-login{
+                margin-left: 20px;
+                width: 200px;
+                height: 40px;
+                margin-bottom: 10px;
+                padding: 10px;
+            }
+            .username{
+                margin-left: 30px;
+                width: 200px;
+                height: 40px;
+                margin-bottom: 10px;
+                padding: 10px;
+
+            }
+            .password{
+                margin-left: 30px;
+                width: 200px;
+                height: 40px;
+                margin-bottom: 10px;
+                padding: 10px;
+                display: block;
+            }
+
+            .rememberTXT {
+                margin-left: 30px;
+                font-family: Arial, sans-serif;
+                font-size: 14px;
+                color: #333;
+                margin-bottom: 10px;
+                margin-top: 10px;
+                display: inline-block; /* Menjadikan teks dan checkbox berada dalam satu baris */
+            }
+
+            .checkbox-wrapper {
+                display: inline-block; /* Menjadikan wrapper checkbox berada dalam satu baris */
+                vertical-align: middle;
+            }
+
+            .checkbox {
+                margin-left: 5px;
+                vertical-align: middle;
+                transition: transform 0.3s ease; /* Animasi transformasi saat checkbox berubah */
+            }
+
+            .checkbox:checked {
+                transform: scale(1.1); /* Memperbesar checkbox saat dicentang */
+            }
+
+            .btn-login{
+                margin-left: 230px;
+                width: 100px;
+                height: 40px;
+                border-radius: 5px;
+                border: none;
+                background-color :rgb(7, 205, 139);
+                margin-top: 20px;
+                margin-bottom: 20px;
+                display: block;
+            }
+            .btn-login:hover{
+                background-color :rgb(12, 123, 86);
+                color: #fff;
+
+
+            }
+            .forget {
+            position: fixed;
+            font-size: 15px;
+            font-weight: 100;
+            margin-left: 160px
+
+            }
+
+            .overlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background: rgba(0, 0, 0, 0.789);
+                z-index: 10; /* Pastikan overlay berada di atas elemen lain */
+                display: none;
+            }
+
+            .center-box {
+                z-index: 20; /* Pastikan kotak berada di atas overlay */
+            }
+
+            a{
+                text-decoration: none;
+                color: rgb(49, 93, 253);
+            }
+
+            a:hover{
+                text-decoration: underline;
+            }
+            a:visited{
+                text-decoration: none;
+                color: rgb(49, 93, 253);
+            }
+
+
+            }
